@@ -6,17 +6,19 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo">DEVICE</a>
-      <form class="site-search" action="#" method="post">
-        <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
-        <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
-      </form>
-      <div class="user-navigation">
-        <a class="enter" href="">Войти</a>
-        <a class="compare" href="">Сравнить</a>
-        <a class="cart" href="">Корзина</a>
-      </div>
+      <a class="main-logo">DEVICE</a> <!-- Вопрос: Логотип лучше делать на будущее как SVG или текстом? -->
       <nav class="main-navigation">
+        <form class="site-search" action="#" method="post">
+          <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
+          <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
+        </form>
+        <div class="user-navigation"> <!-- Вопрос: лучше делать через div, как список или вообще по другому? -->
+          <a class="enter" href="#">Войти</a>
+          <a class="profile" href="#">Профиль</a>
+          <a class="exit" href="#">Выйти</a>
+          <a class="compare" href="#">Сравнить</a>
+          <a class="cart" href="#">Корзина</a>
+        </div>
         <ul class="site-navigation">
           <li>
             <a class="catalog-link main-links" href="catalog.html">Каталог товаров</a>
@@ -36,7 +38,7 @@
       </nav>
     </header>
     <main class="container">
-    
+      
     </main>
     <footer class="main-footer">
 
