@@ -5,23 +5,25 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <!-- Шапка сайта (начало) -->
     <header class="main-header">
-      <a class="main-logo">DEVICE</a> <!-- Вопрос: Логотип лучше делать на будущее как SVG или текстом? -->
+      <a class="main-logo">DEVICE</a>
+      <form class="site-search" action="#" method="post">
+        <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
+        <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
+      </form>
+      <div class="user-navigation"> <!-- Вопрос: лучше делать через div, как список или вообще по другому? -->
+        <a class="enter" href="#">Войти</a>
+        <a class="profile" href="#">Профиль</a>
+        <a class="exit" href="#">Выйти</a>
+        <a class="compare" href="#">Сравнить</a>
+        <a class="cart" href="#">Корзина</a>
+      </div>
+      <!-- Основаня навигация по сайту (начало)-->
       <nav class="main-navigation">
-        <form class="site-search" action="#" method="post">
-          <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
-          <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
-        </form>
-        <div class="user-navigation"> <!-- Вопрос: лучше делать через div, как список или вообще по другому? -->
-          <a class="enter" href="#">Войти</a>
-          <a class="profile" href="#">Профиль</a>
-          <a class="exit" href="#">Выйти</a>
-          <a class="compare" href="#">Сравнить</a>
-          <a class="cart" href="#">Корзина</a>
-        </div>
         <ul class="site-navigation">
           <li>
-            <a class="catalog-link main-links" href="catalog.html">Каталог товаров</a>
+            <a class="catalog-link nav-link" href="catalog.html">Каталог товаров</a>
             <ul class="products-list">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -31,15 +33,20 @@
               <li><a href="#">Квадракоптеры</a></li>
             </ul>
           </li>
-          <li><a class="main-links" href="#">Доставка</a></li>
-          <li><a class="main-links" href="#">Гарантия</a></li>
-          <li><a class="main-links" href="#">Контакты</a></li>
+          <li><a class="nav-link" href="#">Доставка</a></li>
+          <li><a class="nav-link" href="#">Гарантия</a></li>
+          <li><a class="nav-link" href="#">Контакты</a></li>
         </ul>
       </nav>
+      <!-- Основаня навигация по сайту (конец)-->
     </header>
+    <!-- Шапка сайта (конец) -->
+
+    <!-- Содержимое сайта (Начало) -->
     <main class="container">
       
     </main>
+    <!-- Содержимое сайта (Конец) -->
     <footer class="main-footer">
 
     </footer>
