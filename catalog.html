@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров интернет-магазина "DEVICE"</title>
+  </head>
+  <body>
+    <!-- Шапка сайта (начало) -->
+    <header class="main-header">
+      <a class="main-logo" href="index.html">DEVICE</a>
+      <form class="site-search" action="#" method="post">
+        <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
+        <input type="submit" name="site-search-submit" value="Найти">
+      </form>
+      <div class="user-navigation">
+        <a class="login" href="#">Войти</a>
+        <a class="profile" href="#">Профиль</a>
+        <a class="logout" href="#">Выйти</a>
+        <a class="compare" href="#">Сравнить</a>
+        <a class="cart" href="#">Корзина</a>
+      </div>
+      <!-- Основаня навигация по сайту (начало)-->
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li>
+            <a class="catalog-link nav-link" href="catalog.html">Каталог товаров</a>
+            <ul class="products-list">
+              <li>
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="#">Экшн-камеры</a>
+              </li>
+              <li>
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="#">Умные часы</a>
+              </li>
+              <li>
+                <a href="#">Квадракоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="#">Доставка</a></li>
+          <li><a class="nav-link" href="#">Гарантия</a></li>
+          <li><a class="nav-link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <!-- Основаня навигация по сайту (конец)-->
+    </header>
+    <!-- Шапка сайта (конец) -->
+
+    <!-- Содержимое сайта (Начало) -->
+    <main class="container">
+      <h1>Моноподы для селфи</h1>
+
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li class="breadcrumbs-current">Моноподы для селфи</li>
+      </ul>
+      <section class="filter">
+        <h2>Фильтр:</h2>
+        <!-- Разметить форму-->
+        <a class="btn filter-btn" href="#">Показать</a>
+      </section>
+
+      <!-- Блок с товарами и их сортировкой (Начало) -->
+      <section class="catalog-product">
+        <div class="catalog-sorting">
+          <h2 class="catalog-sorting-title">Сортировка:</h2>
+          <ul class="catalog-sorting-list">
+            <li class="sort-by-price"><a>По цене</a></li>
+            <li class="sort-by-type"><a>По типу</a></li>
+            <li class="sort-by-popularity"><a>По популярности</a></li>
+          </ul>
+          <div class="switcher"> <!-- Как правильней будет назвать этот блок и как лучше его разметить?-->
+            <a class="switch switch-asc">&uarr;</a>
+            <a class="switch switch-desc">&darr;</a>
+          </div>
+
+          <!-- Отдельный товар (Начало)-->
+          <div class="product-item">
+            <img src="http://via.placeholder.com/360x380" alt="">
+            <h3>Любительская селфи-палка</h3>
+            <span>500 руб.</span>
+            <div class="product-item-hover">
+              <a class="btn add-to-cart-btn" href="#">В корзину</a>
+              <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+            </div>
+          </div> <!-- Вопрос: Лучше делать товары списком (<ul>) или все через блоки? -->
+          <!-- После определения правильного варианта скопирую др. блоки! -->
+          <!-- Отдельный товар (Конец)-->
+        </div>
+      </section>
+      <!-- Блок с товарами и их сортировкой (Конец) -->
+
+      <!-- Пагинация (Начало) -->
+      <nav class="pagination">
+        <h2 class="visibility-hidden">Навигация по товарам</h2>
+        <a href="#">Назад</a>
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-item-current">1</li>
+          <li class="pagination-item"><a href="#">2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+        </ul>
+        <a href="#">Вперед</a>
+      </nav>
+      <!-- Пагинация (Конец) -->
+    </main>
+    <!-- Содержимое сайта (Конец) -->
+
+    <!-- Подвал (начало) -->
+    <footer class="main-footer">
+      <div class="footer-left"> <!-- Не придумал как лучше назвать) -->
+        <a class="footer-logo" href="index.html">DEVICE</a>
+        <p>г. Москва, ул. Строителей, 15</p>
+      </div>
+
+      <div class="footer-navigation">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer-social">
+          <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+          <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+          <li><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-user-navigation"> <!-- Вопрос: Тут тоже лучше как список или так?-->
+          <a class="footer-login" href="#">Войти</a>
+          <a class="footer-profile" href="#">Профиль</a>
+          <a class="footer-logout" href="#">Выйти</a>
+          <a class="footer-compare" href="#">Сравнить</a>
+          <a class="footer-cart" href="#">Корзина</a>
+          <!-- Еще вопрос: А разве в футере тоже когда пользователь авторизирован, кнопка "Войти" не должна замениться на "профиль" и "Выйти" (в Styleguide не указано), но кажется что должно быть -->
+        </div>
+        <p class="phone-number">
+          Тел.: +7 (495) 495-95-95
+        </p>
+        <div class="footer-copyright">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Подвал (конец) -->
+  </body>
+</html>
