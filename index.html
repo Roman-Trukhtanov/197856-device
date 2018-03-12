@@ -12,12 +12,24 @@
         <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
         <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
       </form>
-      <div class="user-navigation"> <!-- Вопрос: лучше делать через div, как список или вообще по другому? -->
-        <a class="login" href="#">Войти</a>
-        <a class="profile" href="#">Профиль</a>
-        <a class="logout" href="#">Выйти</a>
-        <a class="compare" href="#">Сравнить</a>
-        <a class="cart" href="#">Корзина</a>
+      <div class="user-navigation">
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="login" href="#">Войти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="profile" href="#">Профиль</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="logout" href="#">Выйти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="compare" href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="cart" href="#">Корзина</a>
+          </li>
+        </ul>
       </div>
       <!-- Основаня навигация по сайту (начало)-->
       <nav class="main-navigation">
@@ -45,9 +57,15 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link" href="#">Доставка</a></li>
-          <li><a class="nav-link" href="#">Гарантия</a></li>
-          <li><a class="nav-link" href="#">Контакты</a></li>
+          <li>
+            <a class="nav-link" href="#">Доставка</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Гарантия</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
       <!-- Основаня навигация по сайту (конец)-->
@@ -61,20 +79,20 @@
       <!-- Первый слайд (Начало)-->
       <section class="slider" id="slide-1">
         <h2 class="visibility-hidden">Самая длинная палка для селфи из карбона!</h2>
-        <img src="http://via.placeholder.com/384x486" alt="Селфи палка" width="384" height="486">
+        <img src="img/slider/selfie-stick.png" alt="Селфи палка" width="384" height="486">
         <div class="product">
           <span class="product-number">01</span>
           <p class="slogan-wrapper">
             <b class="product-slogan">
-              Делай селфи,<br> <!-- Вопрос: Здесь <br> можно оставить или все-таки потом сжимать блок? -->
+              Делай селфи,<br>
               как Бен Стиллер!
-              </b>
+            </b>
           </p>
-          <p class="product-description">Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          <p class="product-description">
+            Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="btn more-details-btn" href="#">Подробнее</a>
-          <!-- Как лучше разметить переключатели между слайдами -->
+          <!-- TODO: Переключатели -->
 
           <table class="product-characteristics">
             <tr>
@@ -89,8 +107,69 @@
             </tr>
           </table>
         </div>
-      </section> <!-- После окончательной разметки скопирую 2-ва оставшихся слайда-->
+      </section>
       <!-- Первый слайд (Конец)-->
+
+      <!-- Второй слайд (Начало)-->
+      <section class="slider" id="slide-2">
+        <h2 class="visibility-hidden">Мотивирующий фитнес-браслет!</h2>
+        <img src="img/slider/fitness-bracelet.png" alt="фитнес-браслет" width="345" height="485">
+        <div class="product">
+          <span class="product-number">02</span>
+          <p class="slogan-wrapper">
+            <b class="product-slogan">
+              Худеем <br>
+              правильно!
+            </b>
+          </p>
+          <p class="product-description">
+            Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+          </p>
+          <a class="btn more-details-btn" href="#">Подробнее</a>
+          <!-- TODO: Переключатели -->
+
+          <table class="product-characteristics">
+            <tr>
+              <th>48 часов</th>
+            </tr>
+            <tr>
+              <td>Без подзарядки</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!-- Второй слайд (Конец)-->
+
+      <!-- Третий слайд (Начало)-->
+      <section class="slider" id="slide-3">
+        <h2 class="visibility-hidden">Квадрокоптер с лазером!</h2>
+        <img src="img/slider/quadrocopter.png" alt="квадрокоптер" width="526" height="334">
+        <div class="product">
+          <span class="product-number">03</span>
+          <p class="slogan-wrapper">
+            <b class="product-slogan">
+              Порхает как бабочка, жалит как пчела!
+            </b>
+          </p>
+          <p class="product-description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a class="btn more-details-btn" href="#">Подробнее</a>
+          <!-- TODO: Переключатели -->
+
+          <table class="product-characteristics">
+            <tr>
+              <th>800 м</th>
+              <th>50 м</th>
+            </tr>
+            <tr>
+              <td>Дальность полета</td>
+              <td>Радиус поражения</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!-- Третий слайд (Конец)-->
 
       <!-- Блок с гаджетами (Начало) -->
       <section class="gadgets"> <!-- Нет идей как лучше назвать?)) -->
@@ -151,26 +230,30 @@
           </li>
         </ul>
 
-        <section class="services-item delivery" id="services-delivery">
-          <h2>Доставка</h2>
-          <p class="services-item-description">
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-          </p>
-        </section>
+        <!-- Предоставляемые услуги (Начало) -->
+        <section class="services-items">
+          <div class="service-delivery" id="services-delivery">
+            <h3>Доставка</h3>
+            <p class="services-item-description">
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </div>
 
-        <section class="services-item warranty" id="services-warranty">
-          <h2>Гарантия</h2>
-          <p class="services-item-description">
-            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-          </p>
-        </section>
+          <div class="service-warranty" id="services-warranty">
+            <h3>Гарантия</h3>
+            <p class="services-item-description">
+              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            </p>
+          </div>
 
-        <section class="services-item credit" id="services-credit">
-          <h2>Кредит</h2>
-          <p class="services-item-description">
-            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-          </p>
+          <div class="service-credit" id="services-credit">
+            <h3>Кредит</h3>
+            <p class="services-item-description">
+              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            </p>
+          </div>
         </section>
+        <!-- Предоставляемые услуги (Конец) -->
       </section>
       <!-- Слейдер с услугами (Конец) -->
 
@@ -268,12 +351,23 @@
 
       <div class="footer-right">
         <div class="footer-user-navigation"> <!-- Вопрос: Тут тоже лучше как список или так?-->
-          <a class="footer-login" href="#">Войти</a>
-          <a class="footer-profile" href="#">Профиль</a>
-          <a class="footer-logout" href="#">Выйти</a>
-          <a class="footer-compare" href="#">Сравнить</a>
-          <a class="footer-cart" href="#">Корзина</a>
-          <!-- Еще вопрос: А разве в футере тоже когда пользователь авторизирован, кнопка "Войти" не должна замениться на "профиль" и "Выйти" (в Styleguide не указано), но кажется что должно быть -->
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-item">
+              <a class="footer-  login" href="#">Войти</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-profile" href="#">Профиль</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-logout" href="#">Выйти</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-compare" href="#">Сравнить</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-cart" href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
         <p class="phone-number">
           Тел.: +7 (495) 495-95-95

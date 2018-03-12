@@ -13,11 +13,23 @@
         <input type="submit" name="site-search-submit" value="Найти">
       </form>
       <div class="user-navigation">
-        <a class="login" href="#">Войти</a>
-        <a class="profile" href="#">Профиль</a>
-        <a class="logout" href="#">Выйти</a>
-        <a class="compare" href="#">Сравнить</a>
-        <a class="cart" href="#">Корзина</a>
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="login" href="#">Войти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="profile" href="#">Профиль</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="logout" href="#">Выйти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="compare" href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="cart" href="#">Корзина</a>
+          </li>
+        </ul>
       </div>
       <!-- Основаня навигация по сайту (начало)-->
       <nav class="main-navigation">
@@ -45,9 +57,15 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link" href="#">Доставка</a></li>
-          <li><a class="nav-link" href="#">Гарантия</a></li>
-          <li><a class="nav-link" href="#">Контакты</a></li>
+          <li>
+            <a class="nav-link" href="#">Доставка</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Гарантия</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
       <!-- Основаня навигация по сайту (конец)-->
@@ -59,9 +77,15 @@
       <h1>Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs-current">
+          <a>Моноподы для селфи</a>
+        </li>
       </ul>
       <section class="filter">
         <h2>Фильтр:</h2>
@@ -71,6 +95,7 @@
 
       <!-- Блок с товарами и их сортировкой (Начало) -->
       <section class="catalog-product">
+        <!-- Сортировка товаров (Начало) -->
         <div class="catalog-sorting">
           <h2 class="catalog-sorting-title">Сортировка:</h2>
           <ul class="catalog-sorting-list">
@@ -78,24 +103,61 @@
             <li class="sort-by-type"><a>По типу</a></li>
             <li class="sort-by-popularity"><a>По популярности</a></li>
           </ul>
-          <div class="switcher"> <!-- Как правильней будет назвать этот блок и как лучше его разметить?-->
-            <a class="switch switch-asc">&uarr;</a>
-            <a class="switch switch-desc">&darr;</a>
+          <div class="order">
+            <a class="order-asc">&uarr;</a>
+            <a class="order-desc">&darr;</a>
           </div>
-
-          <!-- Отдельный товар (Начало)-->
-          <div class="product-item">
-            <img src="http://via.placeholder.com/360x380" alt="">
-            <h3>Любительская селфи-палка</h3>
-            <span>500 руб.</span>
-            <div class="product-item-hover">
-              <a class="btn add-to-cart-btn" href="#">В корзину</a>
-              <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
-            </div>
-          </div> <!-- Вопрос: Лучше делать товары списком (<ul>) или все через блоки? -->
-          <!-- После определения правильного варианта скопирую др. блоки! -->
-          <!-- Отдельный товар (Конец)-->
         </div>
+        <!-- Сортировка товаров (Конец) -->
+
+        <!-- Список товаров (Начало) -->
+        <ul class="products-list">
+          <li class="products-list-item">
+            <article class="product-item">
+              <img src="http://via.placeholder.com/360x380" alt="">
+              <h3>Любительская селфи-палка</h3>
+              <span>500 руб.</span>
+              <div class="product-item-hover">
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+              </div>
+            </article>
+          </li>
+          <li class="products-list-item">
+            <article class="product-item">
+              <img src="http://via.placeholder.com/360x380" alt="">
+              <h3>Профессиональная селфи-палка</h3>
+              <span>1500 руб.</span>
+              <div class="product-item-hover">
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+              </div>
+            </article>
+          </li>
+          <li class="products-list-item">
+            <article class="product-item">
+              <img src="http://via.placeholder.com/360x380" alt="">
+              <h3>Непотопляемая селфи-палка</h3>
+              <span>2500 руб.</span>
+              <div class="product-item-hover">
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+              </div>
+            </article>
+          </li>
+          <li class="products-list-item">
+            <article class="product-item">
+              <img src="http://via.placeholder.com/360x380" alt="">
+              <h3>Селфи-палка &laquo;Следуй за мной&raquo;</h3>
+              <span>4900 руб.</span>
+              <div class="product-item-hover">
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <!-- Список товаров (Конец)-->
       </section>
       <!-- Блок с товарами и их сортировкой (Конец) -->
 
@@ -104,7 +166,7 @@
         <h2 class="visibility-hidden">Навигация по товарам</h2>
         <a href="#">Назад</a>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">1</li>
+          <li class="pagination-item pagination-item-current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
         </ul>
@@ -134,20 +196,37 @@
           </li>
         </ul>
         <ul class="footer-social">
-          <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-          <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
-          <li><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+          <li>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          </li>
+          <li>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </li>
+          <li>
+            <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+          </li>
         </ul>
       </div>
 
       <div class="footer-right">
         <div class="footer-user-navigation"> <!-- Вопрос: Тут тоже лучше как список или так?-->
-          <a class="footer-login" href="#">Войти</a>
-          <a class="footer-profile" href="#">Профиль</a>
-          <a class="footer-logout" href="#">Выйти</a>
-          <a class="footer-compare" href="#">Сравнить</a>
-          <a class="footer-cart" href="#">Корзина</a>
-          <!-- Еще вопрос: А разве в футере тоже когда пользователь авторизирован, кнопка "Войти" не должна замениться на "профиль" и "Выйти" (в Styleguide не указано), но кажется что должно быть -->
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-item">
+              <a class="footer-  login" href="#">Войти</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-profile" href="#">Профиль</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-logout" href="#">Выйти</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-compare" href="#">Сравнить</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-cart" href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
         <p class="phone-number">
           Тел.: +7 (495) 495-95-95
