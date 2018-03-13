@@ -10,9 +10,9 @@
     <!-- Шапка сайта (начало) -->
     <header class="main-header">
       <a class="main-logo">DEVICE</a>
-      <form class="site-search" action="#" method="post">
+      <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
         <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
-        <input type="submit" name="site-search-submit" value="Найти"> <!-- Вопрос: лучше делать через input-кнопку или как? -->
+        <button class="site-search-btn" type="submit">Найти</button>
       </form>
       <div class="user-navigation">
         <ul class="user-navigation-list">
@@ -351,9 +351,15 @@
           </li>
         </ul>
         <ul class="footer-social">
-          <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
-          <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
-          <li><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+          <li>
+            <a class="social-btn social-btn-fb" href="#" aria-label="Фейсбук">Фейсбук</a>
+          </li>
+          <li>
+            <a class="social-btn social-btn-inst" href="#" aria-label="Инстаграм">Инстаграм</a>
+          </li>
+          <li>
+            <a class="social-btn social-btn-tw" href="#" aria-label="Твиттер">Твиттер</a>
+          </li>
         </ul>
       </div>
 
