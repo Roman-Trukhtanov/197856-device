@@ -1115,6 +1115,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-logo {
+  margin-right: auto;
+
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 48px;
   line-height: 48px;
@@ -1227,11 +1229,19 @@ input[type="radio"].visually-hidden {
   margin-bottom: 60px;
 }
 
-.footer-condition-block .company-adress,
+.footer-condition-block .company-address,
 .footer-condition-block .phone-number {
   margin: 0;
   padding: 0;
   letter-spacing: 0;
+}
+
+.footer-condition-block .company-address {
+  margin-right: auto;
+}
+
+.footer-condition-block .phone-number {
+  margin-left: auto;
 }
 
 .footer-nav-list {
@@ -1286,7 +1296,9 @@ input[type="radio"].visually-hidden {
 .footer-social-list {
   padding: 0;
   margin: 0;
-  margin-left: -32px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   align-self: center;
   display: flex;
@@ -1346,6 +1358,10 @@ input[type="radio"].visually-hidden {
 
 .htmlacdademy-link:active {
   opacity: 0.3;
+}
+
+.footer-copyright {
+  padding-left: 31px;
 }
 
 .footer-copyright-logo {
