@@ -10,67 +10,83 @@
     <!-- Шапка сайта (начало) -->
     <header class="main-header">
       <a class="main-logo" href="index.html">DEVICE</a>
-      <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
-        <input class="site-search-field" type="search" name="search-field" placeholder="Поиск по сайту">
-        <button class="site-search-btn" type="submit">Найти</button>
-      </form>
-      <div class="user-navigation">
-        <ul class="user-navigation-list">
-          <li class="user-navigation-item">
-            <a class="login" href="#">Войти</a>
-          </li>
-          <li class="user-navigation-item">
-            <a class="profile" href="#">Профиль</a>
-          </li>
-          <li class="user-navigation-item">
-            <a class="logout" href="#">Выйти</a>
-          </li>
-          <li class="user-navigation-item">
-            <a class="compare" href="#">Сравнить</a>
-          </li>
-          <li class="user-navigation-item">
-            <a class="cart" href="#">Корзина</a>
-          </li>
-        </ul>
+      <!-- Поиск по сайту и навигация пользователя (Начало) -->
+      <div class="main-header-columns">
+        <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="site-search-label" for="site-search-element"></label>
+          <input class="site-search-field" type="search" name="search-field" id="site-search-element" placeholder="Поиск по сайту">
+          <button class="site-search-btn" type="submit">Найти</button>
+        </form>
+
+        <div class="user-navigation-wrapper">
+          <ul class="user-navigation-list">
+            <li class="user-navigation-item">
+              <a class="user-navigation-link login hidden-element" href="#">Войти</a>
+              <a class="user-navigation-link profile" href="#">Валентин Петухов</a>
+              <a class="user-navigation-link logout" href="#">Выйти</a>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link compare" href="#">Сравнить</a>
+            </li>
+            <li class="user-navigation-item">
+              <a class="user-navigation-link cart" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <!-- Поиск по сайту и навигация пользователя (Конец) -->
+
       <!-- Основаня навигация по сайту (начало)-->
       <nav class="main-navigation">
+        <div class="header-catalog">
+          <a class="main-catalog-link" href="catalog.html">Каталог товаров</a>
+          <ul class="catalog-list">
+            <li class="catalog-list-item">
+              <ul class="catalog-section-list">
+                <li class="catalog-section-item">
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-section-item">
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li class="catalog-section-item">
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="catalog-list-item">
+              <ul class="catalog-section-list">
+                <li class="catalog-section-item">
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-section-item">
+                  <a href="#">Умные часы</a>
+                </li>
+              </ul>
+            </li>
+            <li class="catalog-list-item">
+              <ul class="catalog-section-list">
+                <li class="catalog-section-item">
+                  <a href="#">Квадракоптеры</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
         <ul class="site-navigation">
-          <li>
-            <a class="catalog-link nav-link" href="catalog.html">Каталог товаров</a>
-            <ul class="products-list">
-              <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Квадракоптеры</a>
-              </li>
-            </ul>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">Доставка</a>
           </li>
-          <li>
-            <a class="nav-link" href="#">Доставка</a>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">Гарантия</a>
           </li>
-          <li>
-            <a class="nav-link" href="#">Гарантия</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Контакты</a>
+          <li class="site-navigation-item">
+            <a class="site-navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
-      <!-- Основаня навигация по сайту (конец)-->
+      <!-- Основаня навигация по сайту (конец) -->
     </header>
     <!-- Шапка сайта (конец) -->
 
@@ -240,62 +256,77 @@
 
     <!-- Подвал (начало) -->
     <footer class="main-footer">
-      <div class="footer-left"> <!-- Не придумал как лучше назвать) -->
-        <a class="footer-logo" href="index.html">DEVICE</a>
-        <p>г. Москва, ул. Строителей, 15</p>
-      </div>
+      <div class="footer-wrapper container">
+        <!-- Блок для пользователя (Начало) -->
+        <section class="footer-user-block">
+          <h2 class="visually-hidden">Блок для пользователя</h2>
+          <a class="footer-logo" href="index.html">DEVICE</a>
 
-      <div class="footer-navigation">
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-        <ul class="footer-social">
-          <li>
-            <a class="social-btn social-btn-fb" href="#" aria-label="Фейсбук">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-btn social-btn-inst" href="#" aria-label="Инстаграм">Инстаграм</a>
-          </li>
-          <li>
-            <a class="social-btn social-btn-tw" href="#" aria-label="Твиттер">Твиттер</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-right">
-        <div class="footer-user-navigation"> <!-- Вопрос: Тут тоже лучше как список или так?-->
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
-              <a class="footer-  login" href="#">Войти</a>
+              <a class="footer-navigation-link footer-login hidden-element" href="#">Войти</a>
+              <a class="footer-navigation-link footer-profile" href="#">Валентин Петухов</a>
+              <a class="footer-navigation-link footer-logout" href="#">Выйти</a>
             </li>
             <li class="footer-navigation-item">
-              <a class="footer-profile" href="#">Профиль</a>
+              <a class="footer-navigation-link footer-compare" href="#">Сравнить</a>
             </li>
             <li class="footer-navigation-item">
-              <a class="footer-logout" href="#">Выйти</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-compare" href="#">Сравнить</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-cart" href="#">Корзина</a>
+              <a class="footer-navigation-link footer-cart" href="#">Корзина</a>
             </li>
           </ul>
-        </div>
-        <p class="phone-number">
-          Тел.: +7 (495) 495-95-95
-        </p>
-        <div class="footer-copyright">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
-        </div>
+        </section>
+        <!-- Блок для пользователя (Конец) -->
+
+        <!-- Условия попуки (Начало) -->
+        <section class="footer-condition-block">
+          <h2 class="visually-hidden">Условия покупки</h2>
+
+          <p class="company-adress">г. Москва, ул. Строителей, 15</p>
+
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+
+          <p class="phone-number">
+            Тел.: +7 (495) 495-95-95
+          </p>
+        </section>
+        <!-- Условия покупки (Конец) -->
+
+        <!-- Социальные сети (Начало) -->
+        <section class="footer-social-block">
+          <h2 class="visually-hidden">Подписка на разные социальные сети</h2>
+
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-fb" href="#" aria-label="Фейсбук"></a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-inst" href="#" aria-label="Инстаграм"></a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-btn social-btn-tw" href="#" aria-label="Твиттер"></a>
+            </li>
+          </ul>
+
+          <div class="footer-copyright">
+            <a class="htmlacdademy-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy - профессионлаьная разработка сайтов">
+              <svg class="footer-copyright-logo" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+                <path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <!-- Социальные сети (Конец) -->
       </div>
     </footer>
     <!-- Подвал (конец) -->

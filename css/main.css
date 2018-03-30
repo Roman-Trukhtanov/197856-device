@@ -1,0 +1,1527 @@
+@font-face {
+  font-family: 'Gilroy ExtraBold';
+  src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+  url('../fonts/gilroyextrabold-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Gilroy Light';
+  src: url('../fonts/gilroylight-webfont.woff2') format('woff2'),
+  url('../fonts/gilroylight-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+  url('../fonts/opensans-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+  url('../fonts/opensans-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+/* Глобальные стили (Начало) */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+  letter-spacing: 0.01em;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+}
+/* Глобальные стили (Конец) */
+
+/* Общие стили (Начало) */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  position: relative;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2.222em;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: calc(50% - (0.44em / 2));
+  left: 0;
+
+  width: 100%;
+  height: 0.44em;
+  background-color: #f0c52e;
+
+  z-index: -1;
+
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  top: 0;
+  height: 100%;
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+/* Общие стили (Конец) */
+
+/* Стили для шапки (Начало) */
+
+.main-header {
+  position: relative;
+
+  width: 1160px;
+  margin:  0 auto;
+
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 48px;
+  padding-top: 34px;
+  color: #000000;
+  background-color: #f7e296;
+}
+
+.main-logo {
+  position: absolute;
+  top: -24px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.main-logo[href]:hover,
+.main-logo[href]:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-logo[href]:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 27px;
+}
+
+/* Поиск по сайту (Начало) */
+.site-search {
+  flex-basis: 500px;
+  font-size: 0;
+}
+
+.site-search-label {
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 38px;
+  height: 31px;
+
+  background-image: url("../img/svg/search.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 2px;
+}
+
+.site-search-field {
+  width: 317px;
+  min-height: 49px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 15px;
+
+  font-size: 15px;
+  line-height: 30px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.site-search-field::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search-field:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-search-field:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-search-field:focus {
+  outline: none;
+  color: black;
+}
+
+.site-search-btn:not(:focus):not(:active) {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+
+  width: 1px;
+  height: 1px;
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.site-search-field:focus ~ .site-search-btn,
+.site-search-btn:focus {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+
+  margin: 0;
+  padding: 0;
+  min-height: 49px;
+  width: 85px;
+
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+
+  background-color: transparent;
+  border: 2px solid black;
+
+  clip: auto;
+
+  overflow: visible;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.site-search-btn:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.site-search-field:focus ~ .site-search-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.site-search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.site-search-field:focus ~ .site-search-btn::before,
+.site-search-btn:focus::before,
+.site-search-btn:active::before {
+  content: "";
+  position: absolute;
+  left: -357px;
+  bottom: -2px;
+
+  display: block;
+  width: 355px;
+  height: 2px;
+
+  background-color: #000000;
+}
+/* Поиск по сайту (Конец) */
+
+/* Стили блока для пользователя (Начало) */
+.user-navigation-wrapper {
+  flex-basis: 500px;
+}
+
+.user-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.user-navigation-item:first-child {
+  margin-right: auto;
+}
+
+.user-navigation-item:last-child {
+  margin-left: 40px;
+}
+
+.user-navigation-item .profile {
+  margin-right: 20px;
+}
+
+.user-navigation-item .login::before,
+.user-navigation-item .profile::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 13px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/svg/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.user-navigation-item .compare::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 10px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/svg/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.user-navigation-item .cart::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 12px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/svg/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.user-navigation-link {
+  display: inline-block;
+  color: black;
+}
+
+.user-navigation-link:hover,
+.user-navigation-link:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-navigation-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-navigation-link:hover::before,
+.user-navigation-link:focus::before {
+  opacity: 0.6;
+}
+
+.user-navigation-link:active::before {
+  opacity: 0.3;
+}
+
+.logout {
+  color: rgba(0,0,0, 0.3);
+}
+/* Стили блока для пользователя (Конец) */
+
+/* Навигация по сайту (Начало) */
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+.header-catalog {
+  flex-basis: 500px;
+}
+
+.main-catalog-link {
+  position: relative;
+  padding-bottom: 4px;
+
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.main-catalog-link::after {
+  content: "";
+  padding-left: 27px;
+  position: absolute;
+
+  display: inline-block;
+  vertical-align: baseline;
+
+  width: 16px;
+  height: 28px;
+
+  background: url(../img/svg/plus.svg) no-repeat right 4px;
+  opacity: .3;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+
+  flex-basis: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.main-catalog-link,
+.site-navigation-link {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.main-catalog-link:hover,
+.main-catalog-link:focus,
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  opacity: 0.6;
+}
+
+.main-catalog-link:active,
+.site-navigation-link:active {
+  opacity: 0.3;
+}
+
+.site-navigation-item:first-child {
+  margin-right: 35px;
+}
+
+.site-navigation-item:nth-child(3n){
+  margin-left: auto;
+  margin-right: -4px;
+}
+
+.catalog-list {
+  padding: 0;
+  margin: -1px;
+
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  border: 0;
+
+  clip: rect(1px 1px 1px 1px);
+  overflow: hidden;
+}
+
+.main-catalog-link:hover ~ .catalog-list,
+.main-catalog-link:focus ~ .catalog-list,
+.catalog-list:hover {
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 17px;
+  padding-bottom: 34px;
+
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1160px;
+  height: auto;
+
+  background-color: #f7e296;
+
+  list-style: none;
+  font-size: 18px;
+
+  clip: auto;
+  overflow: visible;
+
+  z-index: 100;
+}
+
+.catalog-list-opened {
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 17px;
+  padding-bottom: 34px;
+
+  position: absolute;
+  left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1160px;
+  height: auto;
+
+  background-color: #f7e296;
+
+  list-style: none;
+  font-size: 18px;
+
+  clip: auto;
+  overflow: visible;
+
+  z-index: 100;
+}
+
+.catalog-list-item {
+  min-width: 200px;
+}
+
+.catalog-list-item:first-child {
+  margin-right: 40px;
+}
+
+.catalog-section-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  list-style: none;
+}
+
+.catalog-section-item a {
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.catalog-section-item a:hover,
+.catalog-section-item a:focus {
+  opacity: 0.6;
+}
+
+.catalog-section-item a:active {
+  opacity: 0.3;
+}
+/* Навигация по сайту (Конец) */
+
+/* Стили для шапки (Конец) */
+
+/* Стили для слайдера (Начало) */
+.slider-best-products {
+  margin-bottom: 106px;
+
+  position: relative;
+}
+
+.slider-best-products::before {
+  content: "";
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 111px;
+
+  background-color: #f7e296;
+}
+
+.slider-buttons {
+  position: absolute;
+  right: 83px;
+  bottom: 147px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+}
+
+.slider-btn {
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: inset 0 0 0 1px #000;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.slider-btn:not(:last-child) {
+  margin-right: 21px;
+}
+
+.slider-btn-active {
+  box-shadow: inset 0 0 0 1px #000, inset 0 0 0 3px #fff, inset 0 0 0 4px #000;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.slider-photo-wrapper {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 475px;
+}
+
+.product {
+  flex-basis: 50%;
+  margin-left: 40px;
+  padding-top: 80px;
+
+  position: relative;
+}
+
+.product::before {
+  content: "";
+  z-index: -1;
+
+  display: block;
+
+  position: absolute;
+  top: 37px;
+  left: 0;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
+.product-number {
+  position: absolute;
+  top: -10px;
+  right: 50px;
+
+  font-size: 172px;
+  line-height: 172px;
+
+  color: #ffffff;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  letter-spacing: 0.01em;
+
+  z-index: -1;
+}
+
+.slogan-wrapper {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 18px;
+}
+
+.product-slogan {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0.01em;
+}
+
+.product-description {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 44px;
+
+  max-width: 495px;
+
+  color: #464646;
+}
+
+.more-details-btn {
+  margin-bottom: 49px;
+  width: 220px;
+}
+
+.product-characteristics {
+  border-collapse: collapse;
+}
+
+.product-characteristics th {
+  padding: 0;
+  margin: 0;
+
+  width: 160px;
+
+  font-family: "Gilroy Light", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+  text-align: left;
+
+}
+
+.product-characteristics td {
+  padding: 0;
+  margin: 0;
+  padding-top: 7px;
+  width: 160px;
+
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.product-characteristics th:not(:first-child):not(:last-child),
+.product-characteristics td:not(:first-child):not(:last-child) {
+  width: 138px;
+}
+
+/* Стили для слайдера (Конец) */
+
+/* Стили для списка гаджетов (Начало) */
+.gadgets {
+  margin-bottom: 81px;
+}
+
+.gadgets-list {
+  margin: 0;
+  padding: 0;
+  margin-left: -40px;
+
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gadgets-item {
+  margin-left: 40px;
+  width: 160px;
+}
+
+.gadgets-link {
+  display: block;
+  color: black;
+}
+
+.gadgets-link h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.gadgets-wrapper {
+  margin-bottom: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 160px;
+  background-color: #f7e296;
+}
+
+.image-position-bottom {
+  align-items: flex-end;
+  padding-bottom: 2px;
+}
+
+.title-min-width {
+  width: 125px;
+}
+
+.gadgets-link:hover .gadgets-wrapper,
+.gadgets-link:focus .gadgets-wrapper {
+  background-color: #f0c52e;
+}
+
+.gadgets-link:active .gadgets-wrapper img,
+.gadgets-link:active h3 {
+  opacity: 0.3;
+}
+/* Стили для списка гаджетов (Конец) */
+
+/* Стили для сайдера с услугами (Начало) */
+.services {
+  margin-bottom: 95px;
+  padding-bottom: 68px;
+  background-image: linear-gradient(#fff 100px,#e5e5e5 100px);
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding-top: 80px;
+  padding-bottom: 70px;
+  list-style: none;
+}
+.services-list::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  bottom: 0;
+  z-index: 2;
+  width: 7px;
+  height: 100%;
+  background-color: #000000;
+}
+
+.services-list-item {
+  width: 280px;
+}
+
+.services-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.services-default-btn {
+  padding: 0;
+  margin: 0;
+
+  min-width: 160px;
+}
+
+.services-active-btn,
+.services-active-btn:focus,
+.services-active-btn:active {
+  padding-right: 117px;
+  width: 280px;
+  min-height: 40px;
+  background-color: #000000;
+  color: #f7e184;
+  outline: none;
+  cursor: default;
+}
+
+.services-active-btn::before {
+  content: none;
+}
+
+/* Стили для слайдов (Начало) */
+.service-item {
+  padding-top: 73px;
+  padding-right: 320px;
+  padding-bottom: 62px;
+  padding-left: 120px;
+}
+
+.service-delivery {
+  background-image: url(../img/svg/delivery.svg);
+  background-position: right 67px top 85px;
+  background-repeat: no-repeat;
+}
+
+.service-warranty {
+  background-image: url(../img/svg/warranty.svg);
+  background-position: right 47px top 61px;
+  background-repeat: no-repeat;
+}
+
+.service-credit {
+  background-image: url(../img/svg/credit.svg);
+  background-position: right 71px top 60px;
+  background-repeat: no-repeat;
+}
+
+.service-title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+}
+/* Стили для слайдов (Конец) */
+
+.services-item-description {
+  letter-spacing: 0.02em;
+}
+/* Стили для сайдера с услугами (Конец) */
+
+/* Стили для блока с брендами (Начало) */
+.brands {
+  margin-bottom: 84px;
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+  margin-left: -40px;
+
+  list-style: none;
+}
+
+.brands-item {
+  margin-left: 40px;
+}
+
+.brands-link {
+  display: inline-block;
+  vertical-align: top;
+
+  position: relative;
+}
+
+.brands-link .brand-logo-colorless {
+  opacity: 0.2;
+}
+
+.brands-link .brand-logo-coloring {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  z-index: 1;
+
+  transition: 0.5s;
+}
+
+.brands-link:hover .brand-logo-coloring,
+.brands-link:focus .brand-logo-coloring {
+  opacity: 1;
+}
+/* Стили для блока с брендами (Конец) */
+
+/* Стили для блока с описанием компании (Начало) */
+.about-company {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 82px;
+}
+
+.about-company-item {
+  position: relative;
+  padding-top: 53px;
+
+  flex-basis: 50%;
+}
+
+.about-company-item:nth-child(3) {
+  margin-left: 40px;
+}
+
+.about-company-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.about-company-item h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 42px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.about-company .description {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.007em;
+}
+
+.about-us-description-wrapper .description {
+  margin-bottom: 30px;
+  padding-right: 80px;
+}
+
+.about-us-description-wrapper .description:last-child {
+  margin-bottom: 66px;
+}
+
+.about-us-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 54px;
+
+  list-style: none;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.about-us-list-item::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 23px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.about-company .btn {
+  width: 260px;
+}
+
+.contacts-description-wrapper .description {
+  margin-bottom: 39px;
+}
+
+.contacts .map {
+  display: flex;
+  margin-bottom: 69px;
+}
+/* Стили для блока с описанием компании (Конец) */
+
+/* Стили для подвала (Начало) */
+.main-footer {
+  color: #ffffff;
+  background-color: #464646;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 66px;
+}
+
+.footer-user-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 22px;
+}
+
+.footer-logo {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+
+  color: #ffc600;
+}
+
+.footer-logo[href]:hover,
+.footer-logo[href]:focus {
+  opacity: 0.6;
+}
+
+.footer-logo[href]:active {
+  opacity: 0.3;
+}
+
+.footer-navigation-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-navigation-item:not(:first-child){
+  margin-left: 41px;
+}
+
+.footer-profile {
+  margin-right: 20px;
+}
+
+.footer-login::before,
+.footer-profile::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 15px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/svg/footer-icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.footer-compare::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 10px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/svg/footer-icon-compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.footer-cart::before {
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 9px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/svg/footer-icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+
+  opacity: 1;
+}
+
+.footer-navigation-link {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 36px;
+
+  opacity: 0.7;
+}
+
+.footer-navigation-link:hover,
+.footer-navigation-link:focus {
+  opacity: 1;
+}
+
+.footer-navigation-link:active {
+  opacity: 0.3;
+}
+
+.footer-navigation-item .footer-logout {
+  opacity: 0.3;
+}
+
+
+/* Стили для блока с условиями покупки (Начало) */
+.footer-condition-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer-condition-block .company-adress,
+.footer-condition-block .phone-number {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+}
+
+.footer-nav-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+
+  list-style: none;
+  display: flex;
+}
+
+.footer-nav-item {
+  margin-right: 35px;
+}
+
+.footer-nav-item a{
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.19em;
+  color: #ffffff;
+}
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus {
+  opacity: 0.6;
+}
+
+.footer-nav-item a:active {
+  opacity: 0.3;
+}
+
+/* Стили для блока с условиями покупки (Конец) */
+
+.footer-social-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-block::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+  align-self: center;
+}
+
+.footer-social-list {
+  padding: 0;
+  margin: 0;
+  margin-left: -32px;
+
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.footer-social-item {
+  margin-right: 23px;
+}
+
+.social-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.social-btn-fb {
+  background-image: url("../img/svg/fb.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-btn-inst {
+  background-image: url("../img/svg/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-btn-tw {
+  background-image: url("../img/svg/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.social-btn:hover,
+.social-btn:focus {
+  opacity: 0.6;
+}
+
+.social-btn:active {
+  opacity: 0.1;
+}
+
+/* Ссылка на академию (Начало) */
+.htmlacdademy-link {
+  display: flex;
+}
+
+.footer-copyright-logo {
+  fill: #ffc600;
+}
+/* Ссылка на академию (Конец) */
+
+/* Стили для подвала (Конец) */
+
+/* Общие стили модальных окон (Начало) */
+.modal {
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  box-shadow: 0 10px 20px 0 rgba(0,0,0, 0.2);
+
+  transform: translate(-50%,-50%);
+}
+/* Общие стили модальных окон (Конец) */
+
+/* Карта - месторасположение компании (Начало) */
+.modal-map {
+  z-index: 50;
+  width: 960px;
+  height: 559px;
+}
+
+.modal-map p {
+  margin: 0;
+  padding: 0;
+}
+/* Карта - месторасположение компании (Начало) */
+
+/* Стили для кнопки закрытия модального окна (Начало) */
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  padding: 0;
+  background-color: #f0c52e;
+  border: 0;
+  border-radius: 50%;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
+}
+
+.modal-close::before {
+  content: "";
+  top: -10px;
+
+  width: 22px;
+  height: 1px;
+  margin-right: -11px;
+
+  border: 1px solid #ffffff;
+
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  content: "";
+  top: -10px;
+
+  width: 22px;
+  height: 1px;
+  margin-left: -11px;
+
+  border: 1px solid #ffffff;
+
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* Стили для кнопки закрытия модального окна (Конец) */
+
+.modal-map-close,
+.modal-send-message-close {
+  position: absolute;
+  z-index: 5;
+  top: 22px;
+  right: 22px;
+}
+
+/* Отправка сообщения (Начало) */
+.modal-send-message {
+  z-index: 50;
+
+  padding-top: 92px;
+  padding-left:  100px;
+  padding-right: 100px;
+  padding-bottom: 78px;
+
+  background-color: #ffffff;
+}
+
+.send-message-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-field-wrapper {
+  width: 360px;
+  margin-bottom: 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-field-wrapper:nth-child(3) {
+  width: 100%;
+}
+
+.input-text-description {
+  margin-bottom: 7px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.input-text-field {
+  width: 100%;
+  padding: 15px 20px 16px;
+  font-family: "Open Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  background-color: rgba(229, 229, 229, 1);
+  opacity: 0.5;
+  resize: none;
+}
+
+.input-text-field:hover {
+  opacity: 0.8;
+}
+
+.input-text-field:focus,
+.input-text-field:active {
+  padding-top: 12px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 13px;
+
+  background-color: rgba(229, 229, 229, 0);
+  border: 3px solid rgba(240, 197, 46, 0.5);
+
+  opacity: 1;
+  outline: none;
+}
+
+.input-text-field:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: rgba(237, 181, 181, 1);
+  opacity: 0.5;
+}
+
+.input-text-field-invalid {
+  background-color: rgba(237, 181, 181, 1);
+  opacity: 0.5;
+}
+
+.send-message-btn {
+  width: 200px;
+  margin-top: 6px;
+  padding-left: 3px;
+}
+/* Отправка сообщения (Конец) */
+.hidden-element {
+  display: none;
+}
+
