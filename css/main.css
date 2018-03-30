@@ -1339,6 +1339,15 @@ input[type="radio"].visually-hidden {
   display: flex;
 }
 
+.htmlacdademy-link:hover,
+.htmlacdademy-link:focus {
+  opacity: 0.6;
+}
+
+.htmlacdademy-link:active {
+  opacity: 0.3;
+}
+
 .footer-copyright-logo {
   fill: #ffc600;
 }
