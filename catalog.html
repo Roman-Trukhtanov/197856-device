@@ -115,23 +115,29 @@
             <h2 class="filter-title">Фильтр:</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <div class="filter-item">
-                <h3 class="filter-item-title">Стоимость</h3>
+                <h3 class="filter-item-title title-cost">Стоимость</h3>
                 <div class="range-filter">
-                  <div class="range-scale">
-                    <div class="range-bar"></div>
-                  </div>
+                  <div class="range-controls">
 
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+                    <div class="range-scale">
+                      <div class="range-bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min">
+                      <svg class="svg-range" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
+                    </div>
+                    <div class="range-toggle range-toggle-max">
+                      <svg class="svg-range" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg>
+                    </div>
+                  </div>
 
                   <div class="range-price-controls">
                     <label class="range-min-price" for="range-min-price">
                       от
-                      <input name="min-price" type="text" value="0" id="range-min-price">
+                      <input name="min-price" type="text" id="range-min-price" placeholder="0">
                     </label>
                     <label class="range-max-price" for="range-max-price">
                       до
-                      <input name="max-price" type="text" value="15000" id="range-max-price">
+                      <input name="max-price" type="text" id="range-max-price" placeholder="5000">
                     </label>
                   </div>
 
@@ -140,42 +146,42 @@
 
               <!-- Фильрация по цвету (Начало) -->
               <div class="filter-item">
-                <h3 class="filter-item-title">Цвет</h3>
+                <h3 class="filter-item-title title-color">Цвет</h3>
                 <ul class="filter-by-color-list">
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
-                    <label for="filter-black">Черный</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                    <label class="filter-option-description" for="filter-black">Черный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white">
-                    <label for="filter-white">Белый</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="white" id="filter-white">
+                    <label class="filter-option-description" for="filter-white">Белый</label>
                   </li>
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
-                    <label for="filter-blue">Синий</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
+                    <label class="filter-option-description" for="filter-blue">Синий</label>
                   </li>
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="red" id="filter-red" checked>
-                    <label for="filter-red">Красный</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" id="filter-red" checked>
+                    <label class="filter-option-description" for="filter-red">Красный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
-                    <label for="filter-pink">Розовый</label>
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+                    <label class="filter-option-description" for="filter-pink">Розовый</label>
                   </li>
                 </ul>
               </div>
               <!-- Фильтрация по цвету (Конец) -->
 
               <div class="filter-item">
-                <h3 class="filter-item-title">Bluetooth</h3>
+                <h3 class="filter-item-title title-bluetooth">Bluetooth</h3>
                 <ul class="filter-check-bluetooth-list">
                   <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="yes" id="filter-bluetooth-yes">
-                    <label for="filter-bluetooth-yes">Есть</label>
+                    <label class="filter-option-description-radio" for="filter-bluetooth-yes">Есть</label>
                   </li>
                   <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="no" id="filter-bluetooth-no" checked>
-                    <label for="filter-bluetooth-no">Нет</label>
+                    <label class="filter-option-description-radio" for="filter-bluetooth-no">Нет</label>
                   </li>
                 </ul>
               </div>

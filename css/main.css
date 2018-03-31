@@ -213,6 +213,8 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/svg/search.svg");
   background-repeat: no-repeat;
   background-position: 3px 2px;
+
+  cursor: pointer;
 }
 
 .site-search-field {
@@ -1632,8 +1634,6 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-
-
 .filter-section {
   position: relative;
   flex-grow: 1;
@@ -1683,7 +1683,7 @@ input[type="radio"].visually-hidden {
 .filter-item {
   padding: 0;
   padding-top: 10px;
-  padding-bottom: 31px;
+  padding-bottom: 32px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1693,7 +1693,6 @@ input[type="radio"].visually-hidden {
 
 .filter-item-title {
   margin: 0;
-  margin-bottom: 18px;
 
   width: 100%;
 
@@ -1703,6 +1702,263 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.01em;
 }
 
+/* Фильтр по стоимости товара (Начало) */
+.title-cost {
+  margin-bottom: 35px;
+}
+
+.range-controls {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+
+  margin-bottom: 5px;
+}
+
+.range-scale {
+  width: 100%;
+  height: 2px;
+
+  background-color: #dbdbdb;
+}
+
+.range-bar {
+  width: 55%;
+  height: 2px;
+  background-color: #91c92f;
+  position: absolute;
+  left: 6px;
+}
+
+.range-toggle {
+  display: flex;
+  position: absolute;
+  top: -10px;
+  cursor: pointer;
+   z-index: 1;
+}
+
+.range-toggle-min {
+  left: -3%;
+}
+
+.range-toggle-max {
+  left: 54%;
+}
+
+.range-toggle:active .svg-range {
+  position: relative;
+  width: 22px;
+  height: 25px;
+
+  top: -1px;
+  left: -1px;
+}
+
+.range-min-price,
+.range-max-price {
+  font-size: 14px;
+  line-height: 24px;
+
+  color: rgba(0,0,0,.2);
+}
+
+.range-min-price input,
+.range-max-price input{
+  width: 45px;
+  margin-right: 23px;
+  padding: 0;
+  font: inherit;
+  border: 0;
+  background-color: transparent;
+}
+
+.range-min-price input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.range-max-price input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+/* Фильтр по стоимости товара (Конец) */
+
+/* Стили для фильтра по цвету (Начало) */
+.filter-by-color-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.title-color {
+  margin-bottom: 17px;
+}
+
+.filter-option-description,
+.filter-option-description-radio {
+  position: relative;
+  display: block;
+
+  padding-left: 39px;
+  font-size: 14px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.filter-option-description::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid #000000;
+  border-radius: 2px;
+}
+
+.filter-option-description:active::before {
+  width: 27px;
+  height: 23px;
+
+  left: 0;
+  top: 8px;
+
+  border: none;
+  border-radius: 2px;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-input-checkbox:focus ~ .filter-option-description::before,
+.filter-input-checkbox:not(:disabled) ~ .filter-option-description:hover::before {
+  opacity: 0.6;
+}
+
+.filter-input-checkbox:active ~ .filter-option-description:active::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox:checked ~ .filter-option-description::before {
+  width: 27px;
+  height: 23px;
+
+  left: 0;
+  top: 8px;
+
+  border: none;
+  border-radius: 2px;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-input-checkbox:checked ~ .filter-option-description:active::before,
+.filter-input-checkbox:disabled ~ .filter-option-description:active::before {
+  left: 0;
+  top: 8px;
+  display: inline-block;
+  vertical-align: top;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid #000000;
+  border-radius: 2px;
+  background: none;
+}
+
+.filter-input-checkbox:disabled ~ .filter-option-description,
+.filter-input-radio:disabled ~ .filter-option-description-radio {
+  opacity: 0.25;
+  cursor: default;
+}
+/* Стили для фильтра по цвету (конец) */
+
+/* Стили для блока с выбором наличия bluetooth (Начало) */
+.filter-check-bluetooth-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.title-bluetooth {
+  margin-bottom: 18px;
+}
+
+.filter-option-description-radio::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 7px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-option-description-radio:active::before {
+  left: -1px;
+  top: 7px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-input-radio:focus ~ .filter-option-description-radio::before,
+.filter-input-radio:not(:disabled) ~ .filter-option-description-radio:hover::before {
+  opacity: 0.6;
+}
+
+.filter-input-radio:active ~ .filter-option-description-radio:active::before {
+  opacity: 1;
+}
+
+.filter-input-radio:checked ~ .filter-option-description-radio::before {
+  left: -1px;
+  top: 7px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter-input-radio:checked ~ .filter-option-description-radio:active::before,
+.filter-input-radio:disabled ~ .filter-option-description-radio:active::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 7px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/svg/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Стили для блока с выбором наличия bluetooth (Конец) */
+
+.filter-btn {
+  width: 100%;
+}
+
+/*----------------------------------------------------------------------*/
 .catalog-product {
   position: relative;
   flex-grow: 1;
