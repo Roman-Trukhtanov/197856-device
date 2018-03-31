@@ -1550,3 +1550,106 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+/*------------------------------------------------------------------------------------*/
+
+.page-main-header {
+  padding-bottom: 46px;
+}
+
+/* Стили для навигации по каталогу (начало) */
+.catalog-navigation-wrapper {
+  padding-top: 38px;
+  padding-left: 80px;
+}
+
+.catalog-navigation-wrapper h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  list-style: none;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  position: relative;
+  margin-right: 37px;
+}
+
+.breadcrumbs-link {
+  display: block;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.breadcrumbs-link[href]:hover,
+.breadcrumbs-link[href]:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link[href]:active {
+  opacity: 0.1;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  top: 9px;
+
+  display: block;
+  width: 4px;
+  height: 7px;
+
+  background-image: url("../img/svg/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  opacity: 1;
+}
+
+/* Стили для навигации по каталогу (Конец) */
+
+
+.filter-title {
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  font-family: 24px;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.filter fieldset {
+  margin: 0;
+  padding-bottom: 20px;
+
+  border: none;
+}
+
+.filter fieldset {
+  border-top: 2px solid black;
+}
+
+.filter legend {
+  margin: 0;
+  padding: 0;
+
+  display: inline-block;
+}

@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- Шапка сайта (начало) -->
-    <header class="main-header">
+    <header class="main-header page-main-header">
       <a class="main-logo" href="index.html">DEVICE</a>
       <!-- Поиск по сайту и навигация пользователя (Начало) -->
       <div class="main-header-columns">
@@ -91,32 +91,32 @@
     <!-- Шапка сайта (конец) -->
 
     <!-- Содержимое сайта (Начало) -->
-    <main class="container">
-      <h1>Моноподы для селфи</h1>
-
-      <ul class="breadcrumbs">
-        <li>
-          <a href="index.html">Главная</a>
-        </li>
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs-current">
-          <a>Моноподы для селфи</a>
-        </li>
-      </ul>
-      <section class="filter">
-        <h2>Фильтр:</h2>
+    <main class="main-page-content">
+      <div class="catalog-navigation-wrapper container">
+        <h1>Моноподы для селфи</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs-item breadcrumbs-current">
+            <a class="breadcrumbs-link">Моноподы для селфи</a>
+          </li>
+        </ul>
+      </div>
+      <section class="filter-section">
+        <h2 class="filter-title">Фильтр:</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-
-            <fieldset>
-              <legend>Стоимость</legend>
+            <div class="filter-item">
+              <h3>Стоимость</h3>
               <!-- TODO: Доделать ползунок-->
-            </fieldset>
+            </div>
 
             <!-- Фильрация по цвету (Начало) -->
-            <fieldset>
-              <legend>Цвет</legend>
+            <div class="filter-item">
+              <h3>Цвет</h3>
               <ul class="filter-by-color-list">
                 <li class="filter-option">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
@@ -139,11 +139,11 @@
                   <label for="filter-pink">Розовый</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
             <!-- Фильтрация по цвету (Конец) -->
 
-            <fieldset>
-              <legend>Bluetooth</legend>
+            <div class="filter-item">
+              <h3>Bluetooth</h3>
               <ul class="filter-check-bluetooth-list">
                 <li class="filter-option">
                   <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="yes" id="filter-bluetooth-yes">
@@ -154,7 +154,7 @@
                   <label for="filter-bluetooth-no">Нет</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
             <button type="submit" class="btn filter-btn">Показать</button>
         </form>
       </section>
