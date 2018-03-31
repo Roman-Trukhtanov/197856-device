@@ -1560,6 +1560,7 @@ input[type="radio"].visually-hidden {
 .catalog-navigation-wrapper {
   padding-top: 38px;
   padding-left: 80px;
+  margin-bottom: 46px;
 }
 
 .catalog-navigation-wrapper h1 {
@@ -1626,30 +1627,112 @@ input[type="radio"].visually-hidden {
 
 /* Стили для навигации по каталогу (Конец) */
 
+.goods-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+
+
+.filter-section {
+  position: relative;
+  flex-grow: 1;
+  color: #000000;
+  background-color: #efefef;
+}
+
+.filter-section::before,
+.catalog-product::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 100%;
+  height: 70px;
+
+  background-color: #000;
+  opacity: 0.08;
+}
+
+.filter-wrapper {
+  box-sizing: content-box;
+  width: 200px;
+  margin-left: auto;
+  padding-top: 23px;
+  padding-right: 69px;
+  padding-left: 60px;
+  padding-bottom: 20px;
+}
 
 .filter-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 92px;
+
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 16px;
-  font-family: 24px;
+  line-height: 24px;
 
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-.filter fieldset {
+.filter-item {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 31px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  border-top: 2px solid #000;
+}
+
+.filter-item-title {
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 18px;
 
-  border: none;
+  width: 100%;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
 }
 
-.filter fieldset {
-  border-top: 2px solid black;
+.catalog-product {
+  position: relative;
+  flex-grow: 1;
+  color: #000000;
+  background-color: #ffffff;
 }
 
-.filter legend {
+.catalog-product-wrapper {
+  position: relative;
+  width: 832px;
+  padding-left: 72px;
+  margin-right: auto;
+}
+
+.catalog-sorting {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-list {
   margin: 0;
   padding: 0;
 
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
 }
