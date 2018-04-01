@@ -630,6 +630,10 @@ input[type="radio"].visually-hidden {
   background-color: #f7e296;
 }
 
+.slider-item {
+  min-height: 486px;
+}
+
 .slider-buttons {
   position: absolute;
   right: 83px;
@@ -1374,8 +1378,9 @@ input[type="radio"].visually-hidden {
   fill: #ffc600;
 }
 /* Ссылка на академию (Конец) */
-
 /* Стили для подвала (Конец) */
+
+/* ----------------------------------------------------------------------- */
 
 /* Общие стили модальных окон (Начало) */
 .modal {
@@ -1392,11 +1397,43 @@ input[type="radio"].visually-hidden {
 }
 /* Общие стили модальных окон (Конец) */
 
+@keyframes appearanceModal {
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(-50%, -47%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+.modal-show {
+  display: block;
+}
+
 /* Карта - месторасположение компании (Начало) */
 .modal-map {
   z-index: 50;
   width: 960px;
   height: 559px;
+
+  animation-name: appearanceModal;
+  animation-duration: 0.6s;
+}
+
+.google-map-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .modal-map p {
@@ -1425,6 +1462,7 @@ input[type="radio"].visually-hidden {
 .modal-close:hover,
 .modal-close:focus {
   opacity: 1;
+  outline: none;
 }
 
 .modal-close:active {
@@ -1479,6 +1517,9 @@ input[type="radio"].visually-hidden {
   padding-bottom: 78px;
 
   background-color: #ffffff;
+
+  animation-name: appearanceModal;
+  animation-duration: 0.6s;
 }
 
 .send-message-form {
