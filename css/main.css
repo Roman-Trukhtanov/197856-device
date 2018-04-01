@@ -1170,6 +1170,10 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
+.footer-profile::before {
+  margin-right: 11px;
+}
+
 .footer-compare::before {
   content: " ";
   display: inline-block;
@@ -1958,7 +1962,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-/*----------------------------------------------------------------------*/
+/*  Стилизация каталога (Начало) */
 .catalog-product {
   position: relative;
   flex-grow: 1;
@@ -1976,9 +1980,74 @@ input[type="radio"].visually-hidden {
 .catalog-sorting {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 23px;
 }
 
-.products-list {
+.catalog-sorting-title {
+  margin: 0;
+  padding: 0;
+
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  margin-right: 55px;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-sorting-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-family: "Open Sans Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+
+  list-style: none;
+}
+
+.catalog-sorting-type {
+  margin-right: 29px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.catalog-sorting-link {
+  display: block;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.catalog-sorting-link:hover,
+.catalog-sorting-link:focus {
+  opacity: 0.6;
+}
+
+.catalog-sorting-link:active {
+  opacity: 1;
+}
+
+.catalog-sorting-current {
+  opacity: 1;
+}
+
+.order {
+  margin-left: auto;
+  padding-top: 31px;
+
+  padding-bottom: 23px;
+}
+
+.order-list {
   margin: 0;
   padding: 0;
 
@@ -1988,7 +2057,270 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.order-list-item:not(:last-child) {
+  margin-right: 3px;
+}
+
+.order-asc {
+  display: block;
+}
+
+.order-asc::before {
+  content: "";
+  width: 22px;
+  height: 10px;
+  display: block;
+
+  background-image: url("../img/svg/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.order-desc {
+  content: "";
+  width: 22px;
+  height: 10px;
+  display: block;
+
+  background-image: url("../img/svg/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.order-asc[href],
+.order-desc[href] {
+  opacity: 0.2;
+}
+
+.order-asc[href]:hover,
+.order-asc[href]:focus,
+.order-desc[href]:hover,
+.order-desc[href]:focus {
+  opacity: 0.4;
+}
+
+.order-asc[href]:active,
+.order-desc[href]:active {
+  opacity: 1;
+}
+
+.products-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.products-list-item {
+  margin-top: 46px;
+  flex-basis: 360px;
+}
+
+.product-image {
+  position: relative;
+  width: 360px;
+  height: 380px;
+  margin-bottom: 32px;
+}
+
+.product-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  align-items: baseline;
+}
+
+.product-info-link,
+.product-info-link:hover,
+.product-info-link:focus,
+.product-info-link:active {
+  display: block;
+  color: black;
+  width: 260px;
+}
+
+
+.product-info h3{
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.product-info span{
+  display: block;
+
+  font-family: "Gilroy Light", "Arial", sans-serif;
+  width: 100px;
+  text-align: right;
+
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.product-item-hover-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(238,238,238,.7);
+}
+
+.product-item-hover {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-to-cart-btn {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.add-to-compare-btn {
+  display: block;
+
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.add-to-compare-btn:hover,
+.add-to-compare-btn:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.add-to-compare-btn:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.product-image:hover .product-item-hover-wrapper {
+  display: block;
+}
+
+.novelty::before {
+  content: "new";
+  padding-top: 17px;
+  padding-left: 2px;
+
+  position: absolute;
+  top: 29px;
+  right: 27px;
+
+  display: block;
+
+  width: 60px;
+  height: 60px;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+/* Стили пагинации каталога (Начало) */
 .pagination {
+  padding: 0;
+  margin-bottom: 77px;
   display: flex;
   justify-content: space-between;
+
+  background-color: rgba(0,0,0, 0.08);
 }
+
+.pagination-link {
+  display: block;
+
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+
+  padding-top: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 21px;
+}
+
+.pagination-link-prev {
+  margin-right: auto;
+}
+
+.pagination-link-next {
+  margin-left: auto;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  margin-left: 12px;
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.pagination-link-prev:hover,
+.pagination-link-prev:focus,
+.pagination-link-next:hover,
+.pagination-link-next:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+  opacity: 1;
+}
+
+.pagination-link-prev:active,
+.pagination-link-next:active {
+  color: rgba(0,0,0, 0.3);
+}
+
+.pagination-item-link {
+  padding: 25px 14px 21px;
+  opacity: 0.3;
+}
+
+.pagination-item-link[href]:hover,
+.pagination-item-link[href]:focus {
+  opacity: 0.6;
+}
+
+.pagination-item-link[href]:active {
+  opacity: 1;
+}
+
+.pagination-item-current .pagination-item-link{
+  opacity: 1;
+}
+
+/* Стили пагинации каталога (Конец) */
+
+/* Стилизация каталога (Конец) */

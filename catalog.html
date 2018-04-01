@@ -197,23 +197,23 @@
             <div class="catalog-sorting">
               <h2 class="catalog-sorting-title">Сортировка:</h2>
               <ul class="catalog-sorting-list">
-                <li class="sort-by-price">
-                  <a>По цене</a>
+                <li class="catalog-sorting-type">
+                  <a class="catalog-sorting-link catalog-sorting-current" href="#">По цене</a>
                 </li>
-                <li class="sort-by-type">
-                  <a>По типу</a>
+                <li class="catalog-sorting-type">
+                  <a class="catalog-sorting-link" href="#">По типу</a>
                 </li>
-                <li class="sort-by-popularity">
-                  <a>По популярности</a>
+                <li class="catalog-sorting-type">
+                  <a class="catalog-sorting-link" href="#">По популярности</a>
                 </li>
               </ul>
               <div class="order">
                 <ul class="order-list">
                   <li class="order-list-item">
-                    <a class="order-asc">&uarr;</a>
+                    <a class="order-asc" aria-label="Сортировка по возрастанию" href="#"></a>
                   </li>
                   <li class="order-list-item">
-                    <a class="order-desc">&darr;</a>
+                    <a class="order-desc" aria-label="Сортировка по убыванию"></a>
                   </li>
                 </ul>
               </div>
@@ -224,46 +224,82 @@
             <ul class="products-list">
               <li class="products-list-item">
                 <article class="product-item">
-                  <img src="img/lite-stick.jpg" alt="Изображение любительской селфи-палки" width="360" height="380">
-                  <h3>Любительская селфи-палка</h3>
-                  <span>500 руб.</span>
-                  <div class="product-item-hover">
-                    <a class="btn add-to-cart-btn" href="#">В корзину</a>
-                    <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                  <div class="product-image">
+                    <img src="img/lite-stick.jpg" alt="Изображение любительской селфи-палки" width="360" height="380">
+                    <div class="product-item-hover-wrapper">
+                      <div class="product-item-hover">
+                        <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                        <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <a class="product-info-link" href="#">
+                      <h3>Любительская селфи-палка</h3>
+                    </a>
+                    <span>500 руб.</span>
                   </div>
                 </article>
               </li>
               <li class="products-list-item">
                 <article class="product-item">
-                  <img src="img/pro-stick.jpg" alt="Изображение профессиональной селфи-палки" width="360" height="380">
-                  <h3>Профессиональная селфи-палка</h3>
-                  <span>1500 руб.</span>
-                  <div class="product-item-hover">
-                    <a class="btn add-to-cart-btn" href="#">В корзину</a>
-                    <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                  <div class="product-image">
+                    <img src="img/pro-stick.jpg" alt="Изображение профессиональной селфи-палки" width="360" height="380">
+                    <div class="product-item-hover-wrapper">
+                      <div  class="product-item-hover">
+                        <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                        <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <a class="product-info-link" href="#">
+                      <h3>Профессиональная селфи&#8209палка</h3>
+                    </a>
+                    <span>1500 руб.</span>
                   </div>
                 </article>
               </li>
               <li class="products-list-item">
                 <article class="product-item">
-                  <img src="img/watertight-stick.jpg" alt="Изображение непотопляемой селфи-палки" width="360" height="380">
-                  <h3>Непотопляемая селфи-палка</h3>
-                  <span>2500 руб.</span>
-                  <div class="product-item-hover">
-                    <a class="btn add-to-cart-btn" href="#">В корзину</a>
-                    <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                  <div class="product-image">
+                    <img src="img/watertight-stick.jpg" alt="Изображение непотопляемой селфи-палки" width="360" height="380">
+
+                    <div class="product-item-hover-wrapper">
+                      <div class="product-item-hover">
+                        <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                        <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                      </div>
+                    </div>
                   </div>
+                  <div class="product-info">
+                    <a class="product-info-link" href="#">
+                      <h3>Непотопляемая селфи-палка</h3>
+                    </a>
+                    <span>2500 руб.</span>
+                  </div>
+
                 </article>
               </li>
               <li class="products-list-item">
                 <article class="product-item">
-                  <img src="img/hand-stick.jpg" alt="Изображение селфи-палки, выглядящей как рука" width="360" height="380">
-                  <h3>Селфи-палка &laquo;Следуй за мной&raquo;</h3>
-                  <span>4900 руб.</span>
-                  <div class="product-item-hover">
-                    <a class="btn add-to-cart-btn" href="#">В корзину</a>
-                    <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                  <div class="product-image novelty">
+                   <img src="img/hand-stick.jpg" alt="Изображение селфи-палки, выглядящей как рука" width="360" height="380">
+                    <div class="product-item-hover-wrapper">
+                        <div class="product-item-hover">
+                          <a class="btn add-to-cart-btn" href="#">В корзину</a>
+                          <a class="add-to-compare-btn" href="#">Добавить к сравнению</a>
+                        </div>
+                      </div>
                   </div>
+
+                  <div class="product-info">
+                    <a class="product-info-link" href="#">
+                      <h3>Селфи-палка &laquo;Следуй за мной&raquo;</h3>
+                    </a>
+                    <span>4900 руб.</span>
+                  </div>
+
                 </article>
               </li>
             </ul>
@@ -272,13 +308,19 @@
             <!-- Пагинация (Начало) -->
             <nav class="pagination">
               <h2 class="visually-hidden">Навигация по товарам</h2>
-              <a href="#">Назад</a>
+              <a class="pagination-link pagination-link-prev" href="#">Назад</a>
               <ul class="pagination-list">
-                <li class="pagination-item pagination-item-current"><a>1</a></li>
-                <li class="pagination-item"><a href="#">2</a></li>
-                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item pagination-item-current">
+                  <a class="pagination-link pagination-item-link">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link pagination-item-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-link pagination-item-link" href="#">3</a>
+                </li>
               </ul>
-              <a href="#">Вперед</a>
+              <a class="pagination-link pagination-link-next" href="#">Вперед</a>
             </nav>
             <!-- Пагинация (Конец) -->
           </div>
