@@ -67,17 +67,21 @@ sendMessageLink.addEventListener("click", function (evt) {
 modalSendMessageClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalSendMessage.classList.add("hidden-element");
+  modalSendMessage.classList.remove("modal-error-submit");
 });
 
 sendMessageForm.addEventListener('submit', function (evt) {
+
   if (!userName.value) {
     evt.preventDefault();
     userName.classList.add('input-text-field-invalid');
+    modalSendMessage.classList.add("modal-error-submit");
   }
 
   if (!userEmail.value) {
     evt.preventDefault();
     userEmail.classList.add('input-text-field-invalid');
+    modalSendMessage.classList.add("modal-error-submit");
   }
 });
 
@@ -100,6 +104,10 @@ window.addEventListener("keydown", function (evt) {
     if (!modalSendMessage.classList.contains("hidden-element")) {
       modalSendMessage.classList.add("hidden-element");
     }
+    if (modalSendMessage.classList.contains("modal-error-submit")) {
+      modalSendMessage.classList.remove("modal-error-submit");
+    }
+
   }
 });
 
@@ -170,3 +178,4 @@ btnSlider3.addEventListener("click", function (evt) {
   btnSlider1.classList.remove("slider-btn-active");
   btnSlider2.classList.remove("slider-btn-active");
 });
+

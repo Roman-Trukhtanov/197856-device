@@ -102,6 +102,8 @@ input[type="radio"].visually-hidden {
 .btn {
   position: relative;
   padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   display: -webkit-box;
 
@@ -115,7 +117,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-align: center;
   align-items: center;
 
-  height: 2.222em;
+  height: auto;
 
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 18px;
@@ -143,11 +145,11 @@ input[type="radio"].visually-hidden {
   display: block;
 
   position: absolute;
-  top: calc(50% - (0.44em / 2));
+  top: calc(50% - (20% / 2));
   left: 0;
 
   width: 100%;
-  height: 0.44em;
+  height: 20%;
   background-color: #f0c52e;
 
   z-index: -1;
@@ -739,7 +741,7 @@ input[type="radio"].visually-hidden {
 .slider-buttons {
   position: absolute;
   right: 83px;
-  bottom: 147px;
+  bottom: calc(100% - 486px + 147px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1022,6 +1024,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 70px;
   list-style: none;
 }
+
 .services-list::after {
   content: "";
   position: absolute;
@@ -1042,7 +1045,6 @@ input[type="radio"].visually-hidden {
 }
 
 .services-default-btn {
-  padding: 0;
   margin: 0;
 
   min-width: 160px;
@@ -1655,8 +1657,36 @@ input[type="radio"].visually-hidden {
     transform: translate(-50%, -50%);
   }
 }
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-49%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-51%, -50%);
+  }
+}
+
 .modal-show {
   display: block;
+}
+
+.modal.modal-error-submit {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 /* Карта - месторасположение компании (Начало) */
@@ -2351,8 +2381,9 @@ input[type="radio"].visually-hidden {
 
   padding-top: 23px;
   padding-bottom: 23px;
-
   margin-right: 55px;
+
+  max-width: 199px;
 
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 16px;
