@@ -1994,8 +1994,7 @@ input[type="radio"].visually-hidden {
   background-color: #efefef;
 }
 
-.filter-section::before,
-.catalog-product::before {
+.filter-section::before {
   content: "";
 
   position: absolute;
@@ -2367,12 +2366,21 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-sorting {
+  background-color: rgba(0,0,0, 0.08);
+  margin-bottom: 23px;
+}
+
+.catalog-sorting-wrapper {
+  padding-left: 72px;
+  margin-right: auto;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 23px;
+
+  width: 832px;
 }
 
 .catalog-sorting-title {
