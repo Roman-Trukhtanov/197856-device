@@ -9,84 +9,86 @@
 <body>
 <!-- Шапка сайта (начало) -->
 <header class="main-header">
-  <a class="main-logo">DEVICE</a>
-  <!-- Поиск по сайту и навигация пользователя (Начало) -->
-  <div class="main-header-columns">
-    <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
-      <label class="site-search-label" for="site-search-element"></label>
-      <input class="site-search-field" type="search" name="search-field" id="site-search-element" placeholder="Поиск по сайту">
-      <button class="site-search-btn" type="submit">Найти</button>
-    </form>
+  <div class="main-header-container">
+    <a class="main-logo">DEVICE</a>
+    <!-- Поиск по сайту и навигация пользователя (Начало) -->
+    <div class="main-header-columns">
+      <form class="site-search" action="https://echo.htmlacademy.ru" method="get">
+        <label class="site-search-label" for="site-search-element"></label>
+        <input class="site-search-field" type="search" name="search-field" id="site-search-element" placeholder="Поиск по сайту">
+        <button class="site-search-btn" type="submit">Найти</button>
+      </form>
 
-    <div class="user-navigation-wrapper">
-      <ul class="user-navigation-list">
-        <li class="user-navigation-item">
-          <a class="user-navigation-link login" href="#">Войти</a>
-          <a class="user-navigation-link profile hidden-element" href="#">Валентин Петухов</a>
-          <a class="user-navigation-link logout hidden-element" href="#">Выйти</a>
+      <div class="user-navigation-wrapper">
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="user-navigation-link login" href="#">Войти</a>
+            <a class="user-navigation-link profile hidden-element" href="#">Валентин Петухов</a>
+            <a class="user-navigation-link logout hidden-element" href="#">Выйти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link compare" href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link cart" href="#">Корзина</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Поиск по сайту и навигация пользователя (Конец) -->
+
+    <!-- Основаня навигация по сайту (начало)-->
+    <nav class="main-navigation">
+      <div class="header-catalog">
+        <a class="main-catalog-link" href="full-catalog.html">Каталог товаров</a>
+        <ul class="catalog-list">
+          <li class="catalog-list-item">
+            <ul class="catalog-section-list">
+              <li class="catalog-section-item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-section-item">
+                <a href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-section-item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-list-item">
+            <ul class="catalog-section-list">
+              <li class="catalog-section-item">
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-section-item">
+                <a href="#">Умные часы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-list-item">
+            <ul class="catalog-section-list">
+              <li class="catalog-section-item">
+                <a href="#">Квадракоптеры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="site-navigation">
+        <li class="site-navigation-item">
+          <a class="site-navigation-link" href="#">Доставка</a>
         </li>
-        <li class="user-navigation-item">
-          <a class="user-navigation-link compare" href="#">Сравнить</a>
+        <li class="site-navigation-item">
+          <a class="site-navigation-link" href="#">Гарантия</a>
         </li>
-        <li class="user-navigation-item">
-          <a class="user-navigation-link cart" href="#">Корзина</a>
+        <li class="site-navigation-item">
+          <a class="site-navigation-link" href="#">Контакты</a>
         </li>
       </ul>
-    </div>
+    </nav>
+    <!-- Основаня навигация по сайту (конец) -->
   </div>
-  <!-- Поиск по сайту и навигация пользователя (Конец) -->
-
-  <!-- Основаня навигация по сайту (начало)-->
-  <nav class="main-navigation">
-    <div class="header-catalog">
-      <a class="main-catalog-link" href="full-catalog.html">Каталог товаров</a>
-      <ul class="catalog-list">
-        <li class="catalog-list-item">
-          <ul class="catalog-section-list">
-            <li class="catalog-section-item">
-              <a href="#">Виртуальная реальность</a>
-            </li>
-            <li class="catalog-section-item">
-              <a href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li class="catalog-section-item">
-              <a href="#">Экшн-камеры</a>
-            </li>
-          </ul>
-        </li>
-        <li class="catalog-list-item">
-          <ul class="catalog-section-list">
-            <li class="catalog-section-item">
-              <a href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="catalog-section-item">
-              <a href="#">Умные часы</a>
-            </li>
-          </ul>
-        </li>
-        <li class="catalog-list-item">
-          <ul class="catalog-section-list">
-            <li class="catalog-section-item">
-              <a href="#">Квадракоптеры</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="site-navigation">
-      <li class="site-navigation-item">
-        <a class="site-navigation-link" href="#">Доставка</a>
-      </li>
-      <li class="site-navigation-item">
-        <a class="site-navigation-link" href="#">Гарантия</a>
-      </li>
-      <li class="site-navigation-item">
-        <a class="site-navigation-link" href="#">Контакты</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- Основаня навигация по сайту (конец) -->
 </header>
 <!-- Шапка сайта (конец) -->
 

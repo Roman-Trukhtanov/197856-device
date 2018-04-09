@@ -51,7 +51,6 @@ body{
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  padding-top: 40px;
 
   font-family: "Open Sans Light", "Arial", sans-serif;
   font-size: 15px;
@@ -169,12 +168,15 @@ input[type="radio"].visually-hidden {
 /* Общие стили (Конец) */
 
 /* Стили для шапки (Начало) */
-
 .main-header {
-  position: relative;
-
   width: 1160px;
   margin:  0 auto;
+
+  padding-top: 40px;
+}
+
+.main-header-container {
+  position: relative;
 
   padding-left: 60px;
   padding-right: 60px;
